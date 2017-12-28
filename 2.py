@@ -5,7 +5,7 @@
 # Depending on whether the number is even or odd, print out an appropriate 
 # message to the user. 
 # Extras:
-# If the number is a multiple of 4, print out a different message.
+# If the number is a multiple of 4, print out a different message
 
 def main():
     siffra = input("Ange en siffra: ")
