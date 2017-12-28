@@ -15,7 +15,6 @@ def main():
     elif siffra % 2 == 0:
         print("Du skrev in {} vilket är JÄMNT tal".format(siffra))
     else:
-        print("Siffran {} är ett UDDA tal".format(siffra))
-        
+        print("Siffran {} är ett UDDA tal".format(siffra)) 
 if __name__ == "__main__": main()
 
