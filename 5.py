@@ -28,9 +28,9 @@ def main():
     random_list_b = []
     
     # Fyll listorna med slump-siffror
-    for x in range (randint(10, 20)):           # Listans storlek är slumpad (10-20)
+    for _ in range (randint(10, 20)):           # Listans storlek är slumpad (10-20)
         random_list_a.append(randint(1, 20))    # Talen slumpas mellan (1-20)
-    for x in range (randint(10, 20)):
+    for _ in range (randint(10, 20)):
         random_list_b.append(randint(1, 20)) 
 
     print("\nLista A: ", random_list_a)
