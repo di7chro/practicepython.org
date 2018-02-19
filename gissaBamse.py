@@ -7,7 +7,7 @@ from random import randint
 
 Lista=["bamse","skalman","farmor","brummelisa","lilleskutt","vargen","brumme"]
 
-namn=input("Välkommen! Vad heter du? ")
+namn=input("Välkomm en! Vad heter du? ")
 
 print("Hej {}! Gissa på någon i Bamse.".format (namn))
 
