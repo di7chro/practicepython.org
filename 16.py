@@ -14,7 +14,7 @@ def passGen1():
     chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#¤%&/()=+-.,*/"
     numChars = 10
     password = "".join(random.sample(chars, numChars))
-    print("Random Password: " + password)
+    print("Slumpat lösenord: " + password)
 
 def passGen2():
     # Skapa en sträng med olika tecken att ta med
@@ -24,10 +24,10 @@ def passGen2():
     special = "!#¤%&/()=+-.,*/"
     
     # Fråga vilka teckenrymder som skall kunnas väljas från
-    inc_lower = input("Skall jag ta med lower [y/n]: ")
-    inc_upper = input("Skall jag ta med upper [y/n]: ")
-    inc_numbers = input("Skall jag ta med numbers [y/n]: ")
-    inc_special = input("Skall jag ta med special [y/n]: ")
+    inc_lower = input("Skall jag ta med gemener [y/n]: ")
+    inc_upper = input("Skall jag ta med versaler [y/n]: ")
+    inc_numbers = input("Skall jag ta med siffror [y/n]: ")
+    inc_special = input("Skall jag ta med specialtecken [y/n]: ")
         
     # Gör sträng av valda tecken
     chars = ""
@@ -55,7 +55,7 @@ def passGen2():
         print("Du lyckades inte skriva in siffran, avslutar...")
         quit()
     password = "".join(random.sample(chars, numChars))
-    print("Generated Password: " + password)
+    print("Genererat lösenord: " + password)
     
 def main():
     passGen1()
