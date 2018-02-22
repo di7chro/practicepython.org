@@ -23,7 +23,45 @@ Until the user guesses the number.
 """
 from random import randint
 
+def help():
+    print("Välkommen till gissningsspelet!")
+    print("Jag har slumpat ett tal med 4 siffror, du ska gissa")
+    print("vilket tal jag tänkt på!")
+    print("R: Rätt tal på rätt på plats")
+    print("S: Rätt tal, men inte på rätt plats")
+    print("-: Talet skall inte vara med alls")
+    print("----- Skriv exit för att avsluta spelet -----")
+
+def compare(hemligt, gissning):
+    res = []
+   
+    for i in range(0, len(hemligt)):
+        if hemligt[i] == gissning[i]:
+            res.append("R")
+        else:
+            if gissning[i] in hemligt:
+                res.append("S")
+            else:
+                res.append("-")
+    return "".join(res)
+
 def main():
     hemligt = str(randint(10000, 99999))[1:5]
-    print("Hemligt: " + hemligt)
+    #print("Hemligt: " + hemligt)
+    playing = True
+    antalGissningar = 0
+    help()
+    
+    while playing:
+        antalGissningar+=1
+        gissning = input("Ange din gissning: ")
+        if gissning == "exit":
+            quit()
+        resultat = compare(hemligt, gissning)
+        print("Resultat:         ", resultat)
+        if resultat == "RRRR":
+            print("Yeah!")
+            playing = False
+    print("Du klarade det efter {} försök!".format(antalGissningar))
+    
 if __name__ == "__main__": main()
